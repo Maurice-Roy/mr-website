@@ -9,15 +9,10 @@ class MainPage extends React.Component {
   render (props) {
     return (
       <div className="Main-page">
-        <div id="About-link" key="About-page" className="Main-page-block" onClick={(e) => this.props.changeDisplay(e)}>
-          <TextFace/>
+        <div id="About-link-container" className="Main-page-block">
+          <TextFace changeDisplay={this.props.changeDisplay}/>
         </div>
-        <div id="Apps-link" key="Apps-page" className="Main-page-block" onClick={(e) => this.props.changeDisplay(e)}>
-          {/* <ReactFitText compressor={0}>
-            <span>APPS</span>
-          </ReactFitText> */}
-          <AppsVisual/>
-        </div>
+        <AppsVisual/>
         <div id="Audio-link" key="Audio-page" className="Main-page-block" onClick={(e) => this.props.changeDisplay(e)}>
           <div className="Sound-system-container">
             <img className="Sound-system" src={SoundSystem} alt="soundsystem"/>
