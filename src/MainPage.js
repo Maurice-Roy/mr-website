@@ -2,6 +2,8 @@ import React from 'react'
 import TextFace from './TextFace'
 import ReactFitText from 'react-fittext'
 import SoundSystem from './soundsystem.png'
+import AppsVisual from './AppsVisual'
+import SocialMediaLinks from './SocialMediaLinks'
 
 class MainPage extends React.Component {
   render (props) {
@@ -11,15 +13,17 @@ class MainPage extends React.Component {
           <TextFace/>
         </div>
         <div id="Apps-link" key="Apps-page" className="Main-page-block" onClick={(e) => this.props.changeDisplay(e)}>
-          <ReactFitText compressor={0}>
+          {/* <ReactFitText compressor={0}>
             <span>APPS</span>
-          </ReactFitText>
+          </ReactFitText> */}
+          <AppsVisual/>
         </div>
         <div id="Audio-link" key="Audio-page" className="Main-page-block" onClick={(e) => this.props.changeDisplay(e)}>
           <div className="Sound-system-container">
             <img className="Sound-system" src={SoundSystem} alt="soundsystem"/>
           </div>
         </div>
+        <SocialMediaLinks/>
         <div id="Design-link" key="Design-page" className="Main-page-block" onClick={(e) => this.props.changeDisplay(e)}>
           <ReactFitText compressor={0}>
             <span>VISUAL</span>
